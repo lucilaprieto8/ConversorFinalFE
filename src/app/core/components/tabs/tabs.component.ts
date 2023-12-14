@@ -8,22 +8,26 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class TabsComponent {
 
-  pageIn = [false, false, false];
+  pageIn = [false, false, false, false];
   constructor(private router: Router){
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd){
         console.log("evento", event)
         switch (event.urlAfterRedirects){
           case "/conversion":
-            this.pageIn = [false, true, false]
+            this.pageIn = [false, true, false, false]
             console.log("home")
             break;
           case "/subscription":
-            this.pageIn = [true, false, false]
+            this.pageIn = [true, false, false, false]
             console.log("subs")
             break;
+          case "/currency":
+            this.pageIn = [false, false, true, false]
+            console.log("currency")
+            break;
           case "/historical":
-            this.pageIn = [false, false, true]
+            this.pageIn = [false, false, false, true]
             console.log("his")
             break;
         }
@@ -32,5 +36,5 @@ export class TabsComponent {
   }
     linker(link: string){
         this.router.navigate([link])
-    }
+  }
 }

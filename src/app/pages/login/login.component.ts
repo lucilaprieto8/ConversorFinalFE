@@ -32,5 +32,9 @@ export class LoginComponent {
     this.waiting.set(false)
     })
   }
+
+  logout(){
+    this.authService.logout()
+  }
 }
 

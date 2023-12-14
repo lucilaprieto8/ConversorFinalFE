@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: ()=> import('./pages/subscription/subscription.module').then(m => m.SubscriptionModule)  
   },
   {
+    path: "currency",
+    loadChildren: ()=> import('./pages/currency/currency.module').then(m => m.CurrencyModule)
+  },
+  {
     path: "",
     redirectTo: 'conversion',
     pathMatch: "full"
