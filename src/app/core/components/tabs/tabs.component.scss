@@ -1,0 +1,17 @@
+#container{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(249, 188, 219);
+}
+
+.tab{
+    flex: 1,
+    svg{
+        display: block;
+        margin: auto
+    }
+}
+
+.LinkIn{
+    background-color: rgb(150, 62, 131);
+}
