@@ -1,17 +1,28 @@
 #container{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(249, 188, 219);
+    background-color: gray;
+    color: white;
 }
 
+// link in y .tab hover => cambio de color del SVG
 .tab{
     flex: 1,
     svg{
         display: block;
-        margin: auto
+        margin: auto;
+        transition: 2s;
+    }
+    &:hover{
+        stroke: 80px;
+        background-color: rgb(10, 100, 100);
+        svg{
+            color: rgb(10, 100, 100);
+            size: 40px;
+        }
     }
 }
 
 .LinkIn{
-    background-color: rgb(150, 62, 131);
+    background-color: rgb(10, 100, 100);
 }

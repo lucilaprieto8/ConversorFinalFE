@@ -1,0 +1,29 @@
+$alto-header: 100px;
+$alto-footer: 0px;
+$alto-body: calc( 100vh - $alto-header - $alto-footer);
+
+$color-principal-50: #ffffff;
+$color-principal-100: #d7d7d7;
+$color-principal-200: #c5c5c5;
+$color-principal-300: #a3a3a3;
+$color-principal-400: #858585;
+$color-principal-500: #5c5c5c;
+$color-principal-600: #4e4e4e;
+$color-principal-700: #393939;
+$color-principal-800: #1b1b1b;
+$color-principal-900: #000000;
+
+
+$color-acento-600: aquamarine;
+$color-acento-700: rgb(10,100,100);
+
+$color-error: red;
+
+$color-fondo: black;
+$color-texto-wh: white;
+$color-texto: rgb(36, 36, 36);
+$color-texto-invertido: rgb(254, 254, 254);
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+
