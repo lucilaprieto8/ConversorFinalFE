@@ -2,8 +2,6 @@ import { Injectable, inject, signal, WritableSignal } from '@angular/core';
 import { Router } from '@angular/router';
 import { loginData, registerData } from '../core/interfaces/user';
 import { API } from '../constants/api';
-import { currencyData } from '../core/interfaces/currency';
-import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'

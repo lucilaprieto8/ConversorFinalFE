@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CurrencyRoutingModule } from './currency-routing.module';
 import { AppTarjetaCurrencyComponent } from 'src/app/core/components/app-tarjeta-currency/app-tarjeta-currency.component';
 import { CurrencyComponent } from './currency.component';
+import { NuevaCurrencyComponent } from 'src/app/core/components/nueva-currency/nueva-currency.component';
 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { CurrencyComponent } from './currency.component';
   imports: [
     CommonModule,
     CurrencyRoutingModule,
-    AppTarjetaCurrencyComponent
+    AppTarjetaCurrencyComponent,
+    NuevaCurrencyComponent
+
   ]
 })
 export class CurrencyModule { }

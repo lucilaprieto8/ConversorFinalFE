@@ -1,5 +1,10 @@
 export interface currencyData{
-    name: string,
+    id: number
     leyend: string,
-    ic: number,
+    symbol: string, 
+    ic: number,   
+}
+
+export interface currencyConversion {
+    leyend: string,
 }

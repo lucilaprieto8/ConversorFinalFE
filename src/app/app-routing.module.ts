@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: ()=> import('./pages/currency/currency.module').then(m => m.CurrencyModule)
   },
   {
+    path: "currency/:id",
+    loadChildren: ()=> import('./pages/detalle-currency/detalle-currency.module').then(m => m.DetalleCurrencyModule)
+  },
+  {
     path: "",
     redirectTo: 'conversion',
     pathMatch: "full"

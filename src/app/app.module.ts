@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabsComponent } from './core/components/tabs/tabs.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './core/components/header/header.component';
+import { DetalleCurrencyComponent } from './pages/detalle-currency/detalle-currency.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HeaderComponent
   ],
     
   providers: [],

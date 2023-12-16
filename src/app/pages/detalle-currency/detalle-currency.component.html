@@ -1,0 +1,27 @@
+
+<div class="container-chico">
+    <h2>Currency:</h2>
+    <ul>
+      <li>
+        <p>{{ currency.leyend }}</p>
+      </li>
+      <li>
+        <p>{{ currency.symbol }}</p>
+      </li>
+      <li>
+        <p>{{ currency.ic }}</p>
+      </li>
+
+      <div id="botones-container">
+        <button class="cancelar" (click)="borrarCurrency()">Borrar</button>
+        <button (click)="modalEditar.showModal()">Editar</button>
+      </div>
+      <div>
+      <dialog method="modal" #modalEditar>
+        <app-nueva-currency>
+            (cerrar)="modalEditar.close()"
+            [currency]="currency"
+        </app-nueva-currency>
+      </dialog>
+    </div>
+    

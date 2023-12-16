@@ -11,7 +11,7 @@ export class ApiService {
   
 
   async getAuth(endpoint:string){
-  const resp = await fetch(API+endpoint,{
+  const resp = await fetch(API + endpoint,{
     headers:{
       Authorization: "Bearer" + this.auth.token()
     }

@@ -1,5 +1,19 @@
 <div id="currency-component">
-    <app-tarjeta-currency
-    *ngFor="let currency of currencys"
-    [currency]="currency">  </app-tarjeta-currency>
+<app-tarjeta-currency
+    *ngFor="let currency of currencies" 
+    [currency]="currency"
+    [routerLink]="[currency.id]">
+    
+</app-tarjeta-currency>
 </div>
+
+<button class= "botoncito" (click)="dialogNuevaCurrency.showModal()">
+    <span class="material-symbols-outlined colorcito">
+        currency_add
+        </span>
+</button>
+
+<dialog class="formcito" method="dialog" #dialogNuevaCurrency>
+    <app-nueva-currency (cerrar)="dialogNuevaCurrency.close()"></app-nueva-currency>
+</dialog>
+   
