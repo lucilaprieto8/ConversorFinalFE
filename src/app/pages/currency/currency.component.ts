@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { currencyData } from 'src/app/core/interfaces/currency';
 import { CurrencyService } from 'src/app/services/currency.service';
 

@@ -5,6 +5,8 @@ export interface currencyData{
     ic: number,   
 }
 
-export interface currencyConversion {
-    leyend: string,
+export interface currencyToConvert{
+    amount: number,
+    currencyFromId: number,
+    currencyToId:number
 }

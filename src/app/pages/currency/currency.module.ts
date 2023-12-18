@@ -17,7 +17,6 @@ import { NuevaCurrencyComponent } from 'src/app/core/components/nueva-currency/n
     CurrencyRoutingModule,
     AppTarjetaCurrencyComponent,
     NuevaCurrencyComponent
-
   ]
 })
 export class CurrencyModule { }

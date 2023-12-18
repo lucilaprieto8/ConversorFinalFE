@@ -1,0 +1,11 @@
+@use "./../../../assets/styles/variables.scss";
+
+.formcito{
+    border-radius: 15px;
+    border-color: variables.$color-acento-600;
+    box-shadow: 0px 0px 15px rgba(98, 98, 98, 0.5);
+    background-color: black;
+    color: variables.$color-acento-700;
+    height: 400px;
+
+}

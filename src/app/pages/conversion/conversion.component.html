@@ -1,9 +1,8 @@
-<div>
-<app-tarjeta-currency
-*ngFor="let currency of currencyC"
-    [currencyC]="currencyCS">
-</app-tarjeta-currency>
-</div>
-
-
-
+<input type="number" [(ngModel)]="inputamount">
+    <select [(ngModel)]="idfrom" >
+        <option *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
+    </select>
+    <select [(ngModel)]="idto">
+        <option *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
+    </select>
+    <button (click)="convertsCurrency()">convert</button>

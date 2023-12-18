@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { currencyConversion, currencyData } from 'src/app/core/interfaces/currency';
-import { AuthService } from 'src/app/services/auth.service';
+import { Component } from '@angular/core';
+import {  currencyData, currencyToConvert } from 'src/app/core/interfaces/currency';
 import { CurrencyService } from 'src/app/services/currency.service';
 
 @Component({
@@ -10,13 +9,28 @@ import { CurrencyService } from 'src/app/services/currency.service';
 })
 export class ConversionComponent {
   constructor(private service: CurrencyService){}
-  currencyC: currencyConversion [] = []
-  
-  @Input() currencyCS!:currencyConversion
+  currencyS: currencyData [] = []
+
+  inputamount: number = 0
+  idfrom: number = 0
+  idto: number = 0
+
 
   ngOnInit(): void {
     this.service.getAll().then( res => {
-      this.currencyC = res
+      this.currencyS = res
     })
+  }
+
+  currencyToConvert : currencyToConvert = {
+    amount: this.inputamount,
+    currencyFromId: this.idfrom,
+    currencyToId: this.idto
+  }
+  
+  result: number = 0;
+
+  async convertsCurrency(){
+    this.service.convertCurrency(this.currencyToConvert)
   }
 }

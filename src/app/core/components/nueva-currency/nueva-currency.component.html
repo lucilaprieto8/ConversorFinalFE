@@ -1,6 +1,5 @@
 <form class="ngForm" (ngSubmit)="onSubmit()">
-    <h2>{{ currency.id ? "new currency" : 
-    "edit currency" }}</h2>
+    <h2>{{ currency.id ? "new currency" : "edit currency" }}</h2>
     <div>
       <label for="">name</label>
       <input type="text" [(ngModel)]="currency.symbol" name="name" />

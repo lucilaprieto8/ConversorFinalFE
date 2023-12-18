@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { API } from '../constants/api';
-import { AuthService } from './auth.service';
-import { currencyConversion, currencyData } from '../core/interfaces/currency';
+import { currencyData, currencyToConvert } from '../core/interfaces/currency';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ export class CurrencyService extends ApiService{
 
   async create(currency: currencyData): Promise<boolean> {
     if (currency.id) return false;
-    const res = await fetch(API + 'api/Currency/', {
+    const res = await fetch(API + 'api/Currency', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -23,8 +22,8 @@ export class CurrencyService extends ApiService{
     return res.ok;
   }
 
-  async delete(Id: number): Promise<boolean> {
-    const res = await fetch(API + 'api/Currency' + Id, {
+  async delete(id: number): Promise<boolean> {
+    const res = await fetch(API + 'api/Currency/' + id, {
       method: 'DELETE',
       headers: {
         Authorization: 'Bearer ' + this.auth.token(),
@@ -33,43 +32,21 @@ export class CurrencyService extends ApiService{
     return res.ok;
   }
 
-  async edit(currency: currencyData): Promise<boolean> {
-    console.log("ando");
-    if (!currency.id) return false;
-    try {
-      const res = await fetch(API + 'api/Currency/' + currency.id, {
+  async edit(currency: currencyData){
+    console.log(this.auth.token())
+    const url = `${API}api/Currency/${currency.id}`;
+  
+      const res = await fetch(url, {
         method: 'PUT',
         headers: {
-          'Content-type': 'application/json',
-          Authorization: 'Bearer ' + this.auth.token(),
+          'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + this.auth.token(),
         },
-        
-        body: JSON.stringify(currency),
+        body: JSON.stringify(currency)
       });
-  
-      console.log('Código de estado de la respuesta:', res.status);
-  
-      if (res.ok) {
-        console.log('Respuesta exitosa:', await res.text());
-      } else {
-        console.error('Error en la respuesta:', await res.text());
-      }
-  
-      return res.ok;
-    } catch (error) {
-      console.error('Error en la llamada a fetch:', error);
-      return false;
-    }
   }
-  
-
 
   async getAll(): Promise<currencyData[]>{
-    const res = await this.getAuth('api/Currency/GetAll');
-    const resJson = await res.json();
-    return resJson;
-  }
-  async getAllC(): Promise<currencyConversion[]>{
     const res = await this.getAuth('api/Currency/GetAll');
     const resJson = await res.json();
     return resJson;
@@ -84,5 +61,18 @@ export class CurrencyService extends ApiService{
       },
     });
     return await res.json();
+  }
+
+  async convertCurrency(currencyToConvert: currencyToConvert): Promise<number>{
+    console.log(this.auth.token())
+    const res = await fetch(API + 'api/Currency/Convert', {
+      method: 'POST',
+      headers: {
+        'Content-type' : 'application/json',
+        Authorization: 'Bearer ' + this.auth.token(),
+      },
+      body: JSON.stringify(currencyToConvert)   
+    })
+    return await Number(res.json)
   }
 }

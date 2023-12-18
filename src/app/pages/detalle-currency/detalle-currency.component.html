@@ -17,7 +17,8 @@
         <button (click)="modalEditar.showModal()">Editar</button>
       </div>
       <div>
-      <dialog method="modal" #modalEditar>
+        
+      <dialog method="modal" #modalEditar class="formcito">
         <app-nueva-currency>
             (cerrar)="modalEditar.close()"
             [currency]="currency"

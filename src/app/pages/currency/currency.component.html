@@ -3,7 +3,6 @@
     *ngFor="let currency of currencies" 
     [currency]="currency"
     [routerLink]="[currency.id]">
-    
 </app-tarjeta-currency>
 </div>
 
@@ -14,6 +13,6 @@
 </button>
 
 <dialog class="formcito" method="dialog" #dialogNuevaCurrency>
-    <app-nueva-currency (cerrar)="dialogNuevaCurrency.close()"></app-nueva-currency>
+        <app-nueva-currency (cerrar)="dialogNuevaCurrency.close()"></app-nueva-currency>
 </dialog>
    
