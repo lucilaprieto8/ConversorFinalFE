@@ -62,9 +62,14 @@ export class CurrencyService extends ApiService{
     });
     return await res.json();
   }
+async getAttemps(): Promise<number>{
+    const res = await this.getAuth('api/Currency/GetAttemps')
+    const result = await res.json()
+    return parseInt(result)
+}
 
   async convertCurrency(currencyToConvert: currencyToConvert): Promise<number>{
-    console.log(this.auth.token())
+    console.log(currencyToConvert)
     const res = await fetch(API + 'api/Currency/Convert', {
       method: 'POST',
       headers: {
@@ -73,6 +78,8 @@ export class CurrencyService extends ApiService{
       },
       body: JSON.stringify(currencyToConvert)   
     })
-    return await Number(res.json)
+  const result = await res.json()
+  //console.log(parseInt(result))
+  return parseInt(result)
   }
 }

@@ -1,0 +1,7 @@
+<div>
+<app-tarjeta-subscription
+    *ngFor="let subscription of subscriptions" 
+    [subscriptionData]="subscription"
+    (click)="updateSubscription(subscription.id)">
+</app-tarjeta-subscription>
+</div>

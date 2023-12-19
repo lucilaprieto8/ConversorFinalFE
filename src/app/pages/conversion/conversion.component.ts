@@ -22,15 +22,15 @@ export class ConversionComponent {
     })
   }
 
-  currencyToConvert : currencyToConvert = {
-    amount: this.inputamount,
-    currencyFromId: this.idfrom,
-    currencyToId: this.idto
-  }
-  
-  result: number = 0;
-
+ resultadoConversion : number | undefined
   async convertsCurrency(){
-    this.service.convertCurrency(this.currencyToConvert)
-  }
+    var currencyToConvertData : currencyToConvert = {
+        amount: this.inputamount,
+        currencyFromId: this.idfrom,
+        currencyToId: this.idto
+      }
+    this.resultadoConversion = await this.service.convertCurrency(currencyToConvertData)
 }
+ 
+
+}   
