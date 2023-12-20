@@ -41,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: 'conversion',
+    redirectTo: 'login',
     pathMatch: "full"
   },
 ];

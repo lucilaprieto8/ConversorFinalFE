@@ -10,5 +10,34 @@
     text-align: center;
     font-size: large;
     font-weight: 600;
+}
 
+.botoncito{
+    position: fixed;
+    bottom: 55px;
+    right: 5px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.colorcito{
+    font-size: 40px;
+    color: variables.$color-acento-700;
+}
+
+ul {
+    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: variables.$color-acento-700;
+    padding: 10px 5px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    color: variables.$color-acento-600;
+}
+
+li {
+    float: left;
 }

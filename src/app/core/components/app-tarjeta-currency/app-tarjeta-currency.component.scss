@@ -1,0 +1,10 @@
+.tarjeta-currency{
+    padding: 10px 5px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    cursor: pointer;
+    border-color: black;
+    border-width: 5px;
+    align-items: center;
+    transition: 0.3s;   
+}

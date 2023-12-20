@@ -80,6 +80,6 @@ async getAttemps(): Promise<number>{
     })
   const result = await res.json()
   //console.log(parseInt(result))
-  return parseInt(result)
+  return parseFloat(result)
   }
 }

@@ -1,3 +1,11 @@
+<nav id="navegador">
+    <ul>
+        <li>Symbol</li>
+        <li>Leyend</li>
+        <li>IC</li>
+      </ul>
+</nav>
+
 <div id="currency-component">
 <app-tarjeta-currency
     *ngFor="let currency of currencies" 
@@ -8,7 +16,7 @@
 
 <button class= "botoncito" (click)="dialogNuevaCurrency.showModal()">
     <span class="material-symbols-outlined colorcito">
-        currency_add
+        add_circle
         </span>
 </button>
 

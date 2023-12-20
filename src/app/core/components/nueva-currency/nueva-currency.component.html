@@ -1,7 +1,7 @@
-<form class="ngForm" (ngSubmit)="onSubmit()">
+<form class="formcito" (ngSubmit)="onSubmit()">
     <h2>{{ currency.id ? "new currency" : "edit currency" }}</h2>
     <div>
-      <label for="">name</label>
+      <label for="">Symbol</label>
       <input type="text" [(ngModel)]="currency.symbol" name="name" />
     </div>
     <div>

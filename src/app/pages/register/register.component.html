@@ -33,8 +33,9 @@
         </button>
         <p *ngIf="errorRegister()" class="error">Error en el inicio de sesión</p>
       </form>
+      <p>¿Ya tenés una cuenta? </p>
       <p>
-        ¿Ya tenés una cuenta? - <a [routerLink]="['/login']" routerLinkActive="router-link-active" routerLinkActive="router-link-active" >Iniciar Sesión</a></p>
+        <a [routerLink]="['/login']" routerLinkActive="router-link-active" routerLinkActive="router-link-active" > Iniciar Sesión</a></p>
     </div>
   </div>
   

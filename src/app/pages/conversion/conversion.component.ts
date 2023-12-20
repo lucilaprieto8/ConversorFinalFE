@@ -23,6 +23,7 @@ export class ConversionComponent {
   }
 
  resultadoConversion : number | undefined
+ 
   async convertsCurrency(){
     var currencyToConvertData : currencyToConvert = {
         amount: this.inputamount,
