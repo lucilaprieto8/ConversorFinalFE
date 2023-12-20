@@ -11,11 +11,12 @@ $color-principal-500: #5c5c5c;
 $color-principal-600: #4e4e4e;
 $color-principal-700: #393939;
 $color-principal-800: #1b1b1b;
-$color-principal-900: #000000;
+$color-principal-900: rgb(0, 0, 0, .5);
 
 
-$color-acento-600: aquamarine;
-$color-acento-700: rgb(10,100,100);
+$color-acento-600: #e2ac37;
+$color-acento-700: #D28F00;
+$color-acento-800: rgb(210, 143, 0, .5);
 
 $color-error: red;
 
@@ -26,4 +27,3 @@ $color-texto-invertido: rgb(254, 254, 254);
 
 $bp-mobile: 480px;
 $bp-tablet: 768px;
-

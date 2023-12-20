@@ -1,7 +1,9 @@
 <div class="form-container">
 <div class="container">
-    <h1>{{subscriptionData.name}}</h1>
-    <p>Price: {{subscriptionData.price}}</p>
-    <p>Attemps: {{subscriptionData.maxAttemps}}</p>
+    <div class="info">
+        <h1>{{subscriptionData.name}}</h1>
+        <p>Attemps: {{subscriptionData.maxAttemps}}</p>
+        <p class="price">${{subscriptionData.price}}</p>
+    </div>
 </div>
 </div>

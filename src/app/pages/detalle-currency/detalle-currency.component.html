@@ -1,17 +1,20 @@
 
-<div class="container-chico">
-    <h2>Currency:</h2>
-    <ul>
-      <li>
-        <p>{{ currency.leyend }}</p>
-      </li>
-      <li>
-        <p>{{ currency.symbol }}</p>
-      </li>
-      <li>
-        <p>{{ currency.ic }}</p>
-      </li>
-
+<div class="back">
+  <div class="currenci">
+      <h2>Currency</h2>
+        <ul>
+          <li>
+            <p>Leyend: {{ currency.leyend }}</p>
+          </li>
+          <li>
+            <p>Symbol: {{ currency.symbol }}</p>
+          </li>
+          <li>
+            <p>IC: {{ currency.ic }}</p>
+          </li>
+        </ul>
+  </div>
+  <div class="boti">
       <div id="botones-container">
         <button class="cancelar" (click)="borrarCurrency()">Borrar</button>
         <button (click)="modalEditar.showModal()">Editar</button>
@@ -24,5 +27,6 @@
             [currency]="currency">
         </app-nueva-currency>
       </dialog>
-    </div>
+  </div>    
+</div>
     

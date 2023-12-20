@@ -1,18 +1,18 @@
-<form class="form" (ngSubmit)="onSubmit()">
-    <h2>{{ currency.id ? "edit currency" : "create currency" }}</h2>
-    <div>
-      <label for="">Symbol</label>
-      <input type="text" [(ngModel)]="currency.symbol" name="name" />
-    </div>
-    <div>
-        <label for="">leyend</label>
-        <input type="text" [(ngModel)]="currency.leyend" name="leyend" />
-    </div>
-    <div>
-        <label for="">ic</label>
-        <input type="text" [(ngModel)]="currency.ic" name="ic" />
-    </div>
-    <div class="botones">
-            <button class="cancelar" type="button" (click)="this.cerrar.emit()">Cancelar</button>
-            <button type="submit">{{ currency.id ? "edit" : "create" }} </button>
-    </div>
+    <form class="form" (ngSubmit)="onSubmit()">
+        <h2>{{ currency.id ? "EDIT CURRENCY" : "CREATE CURRENCY" }}</h2>
+            <div>
+                <label for="">Symbol</label>
+                <input type="text" [(ngModel)]="currency.symbol" name="name" />
+            </div>
+            <div>
+                <label for="">leyend</label>
+                <input type="text" [(ngModel)]="currency.leyend" name="leyend" />
+            </div>
+            <div>
+                <label for="">ic</label>
+                <input type="text" [(ngModel)]="currency.ic" name="ic" />
+            </div>
+            <div class="botones">
+                    <button class="cancelar" type="button" (click)="this.cerrar.emit()">exit</button>
+                    <button type="submit">{{ currency.id ? "edit" : "create" }} </button>  
+            </div>

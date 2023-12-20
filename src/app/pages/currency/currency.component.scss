@@ -1,16 +1,24 @@
 @use "./../../../assets/styles/variables.scss";
 
+
+.back{
+    height: 542px;
+    align-items: center;
+    background-image: url("./../../../assets/img/wallpaperblack.png");
+    background-position: center;
+    background-size:cover;
+}
 .formcito{
     border-radius: 15px;
     border-color: variables.$color-acento-700;
-    box-shadow: 0px 0px 15px rgba(98, 98, 98, 0.5);
-    background-color: rgb(202, 202, 202);
+    background-color: black;
     color: variables.$color-acento-700;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: large;
     font-weight: 600;
 }
+
 
 .botoncito{
     position: fixed;
@@ -26,15 +34,14 @@
 }
 
 ul {
-    font-weight: 500;
+    font-weight: 700;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    background-color: variables.$color-acento-700;
-    padding: 10px 5px;
+    padding: 10px 15px;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;
     color: variables.$color-acento-600;
 }
 

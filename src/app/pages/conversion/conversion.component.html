@@ -2,10 +2,10 @@
     <div class="form-container">     
         <input type="number" [(ngModel)]="inputamount" class="input">
             <select [(ngModel)]="idfrom" class="form">
-                <option *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
+                <option class="option" *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
             </select>
             <select [(ngModel)]="idto" class="form">
-                <option *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
+                <option class="option" *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
             </select>
             <button (click)="convertsCurrency()" class="form">convert </button >
             <p *ngIf="resultadoConversion !== undefined">Resultado: {{ resultadoConversion }}</p>

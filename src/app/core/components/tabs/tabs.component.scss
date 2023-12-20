@@ -3,7 +3,7 @@
 #container{
     display: flex;
     justify-content: space-around;
-    background-color: gray;
+    background-color: black ;
     color: white;
 }
 
@@ -17,7 +17,7 @@
     }
     &:hover{
         stroke: 80px;
-        background-color: variables.$color-acento-700;
+        background-color: rgb(16, 16, 16);
         svg{
             color: variables.$color-acento-700;
             size: 40px;
@@ -26,12 +26,12 @@
 }
 
 .LinkIn{
-    background-color: variables.$color-acento-700;
+    background-color: rgb(16, 16, 16);
 }
 
 .icon{
     font-size: 40px;
-    color: variables.$color-acento-600;
+    color: variables.$color-acento-700;
     padding: 7px;
     align-items: center;
 }

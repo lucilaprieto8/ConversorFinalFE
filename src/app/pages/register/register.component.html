@@ -3,39 +3,39 @@
 
 <div id="container">
     <div class="form-container">
-      <h1>Registro</h1>
+      <h1>Register</h1>
       <form (ngSumbit)="register()">
-        <label for="user" class="sr-only">Nombre de usuario</label>
+        <label for="user" class="sr-only">Username</label>
         <input
           type="text"
           name="user"
           id="user"
-          placeholder="Usuario"
+          placeholder="user"
           autocomplete="username"
           minlength="4"
           required="true"
           [(ngModel)]="registerData.UserName"
           #username="ngModel"
         />
-        <label for="password" class="sr-only">Contraseña</label>
+        <label for="password" class="sr-only">Password</label>
         <input
           type="password"
           name="password"
           id="password"
-          placeholder="Contraseña"
+          placeholder="password"
           autocomplete="current-password"
           minlength="8"
           [(ngModel)]="registerData.Password"
           #password="ngModel"
         />
         <button type="submit" (click)="register()">
-          Registrarse
+          Register
         </button>
-        <p *ngIf="errorRegister()" class="error">Error en el inicio de sesión</p>
+        <p *ngIf="errorRegister()" class="error">Acces probelm</p>
       </form>
-      <p>¿Ya tenés una cuenta? </p>
+      <p>Did you already have an account?</p>
       <p>
-        <a [routerLink]="['/login']" routerLinkActive="router-link-active" routerLinkActive="router-link-active" > Iniciar Sesión</a></p>
+        <a [routerLink]="['/login']" routerLinkActive="router-link-active" routerLinkActive="router-link-active" >Sign In</a></p>
     </div>
   </div>
   

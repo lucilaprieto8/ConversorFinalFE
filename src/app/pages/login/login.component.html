@@ -1,16 +1,17 @@
 <div id="container">
     <div class="form-container">
-        <h1>Iniciar sesión</h1>
+        <h1>Welcome</h1>
 
         <form #loginForm="ngForm" (ngSumbit)="login()">
-            <label for="user" class="sr-only">usuario</label>
-            <input type="text" name="user" id="user" [(ngModel)]="loginData.UserName" #user="ngModel"placeholder="Usuario" autocomplete="username" required >
-            <label for="password" class="sr-only">contraseña</label>
-            <input type="password" name="password" id="password" [(ngModel)]="loginData.Password" #password="ngModel" placeholder="Contraseña">
-            <button type="submit" (click)="login()">Iniciar sesión</button>
-            <img class="spinner" src="./../../../assets/img/icons/spinner.svg" alt="cargando" *ngIf="waiting()">            <p *ngIf="(error())">Error al Iniciar Sesión</p>
+            <label for="user" class="sr-only">user</label>
+            <input type="text" name="user" id="user" [(ngModel)]="loginData.UserName" #user="ngModel"placeholder="user" autocomplete="username" required >
+            <label for="password" class="sr-only">password</label>
+            <input type="password" name="password" id="password" [(ngModel)]="loginData.Password" #password="ngModel" placeholder="password">
+            <button type="submit" (click)="login()">Sign In</button>
+            <img class="spinner" src="./../../../assets/img/icons/spinner.svg" alt="cargando" *ngIf="waiting()">            
+            <p *ngIf="(error())">Access problem</p>
         </form>
-        <p>¿Todavía no tenés una cuenta?</p>
-        <p> <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Registrate</a></p>
+        <p>Didn't you have an account yet?</p>
+        <p> <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Register</a></p>
     </div>
 </div>
