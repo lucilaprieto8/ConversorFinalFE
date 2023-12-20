@@ -49,9 +49,12 @@ table {
 	border-spacing: 0;
 }
 
+.spinner{
+	height: 50px;
+}
+
 app-root{
 	min-height: 100svh;
 	display: flex;
 	flex-direction: column;
 }
-
