@@ -36,6 +36,9 @@ export class DetalleCurrencyComponent implements OnInit {
         this.currency.leyend +
         '?',
       icon: 'warning',
+      customClass: {
+        popup: 'swal2-popup'
+      },
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',

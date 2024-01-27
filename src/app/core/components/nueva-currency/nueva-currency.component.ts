@@ -22,7 +22,7 @@ export class NuevaCurrencyComponent {
     ic: 0,
   }
 async onSubmit() {
-  this.currency.id ? this.agregarCurrency() : this.editarCurrency();
+  this.currency.id ? this.editarCurrency() : this.agregarCurrency();
 }
 
 async agregarCurrency() {

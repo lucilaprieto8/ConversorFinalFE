@@ -1,5 +1,17 @@
 @use "./../../../assets/styles/variables.scss";
 
+.back{
+    padding-top: 30px;
+    height: 512px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: grey;
+    background-position: center;
+    background-size:cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
 .formcito{
     border-radius: 15px;
     border-color: variables.$color-acento-600;
@@ -8,4 +20,47 @@
     color: variables.$color-acento-700;
     height: 400px;
 
+}
+.swal2-popup{
+    background-color: black;
+}
+.currenci{
+    margin-left: 15px;
+    padding: 15px;
+}
+
+.currenci h2{
+    padding-bottom: 5px;
+    text-align: center;
+    color: variables.$color-acento-700;
+    font-weight: 600;
+}
+
+#botones-container{
+    align-items: center!important;
+    justify-content: center!important;
+    display: flex;
+    flex-direction: column;
+}
+
+
+button{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 80px;
+    display: flex;
+}
+
+button{
+    padding: 10px;
+    border-radius: 8px;
+    border:  variables.$color-acento-700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: variables.$color-acento-700;
+    color: variables.$color-texto-wh;
+    justify-content: center;
 }

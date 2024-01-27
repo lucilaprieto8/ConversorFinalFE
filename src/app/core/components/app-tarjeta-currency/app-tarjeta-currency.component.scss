@@ -1,10 +1,26 @@
+@use "./../../../../assets/styles/variables.scss";
+
+
 .tarjeta-currency{
-    padding: 10px 5px;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
     cursor: pointer;
-    border-color: black;
-    border-width: 5px;
-    align-items: center;
-    transition: 0.3s;   
+    color: white;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 50px;
+    padding: 10px 5px;
+}
+
+.container{
+    background-color: variables.$color-principal-900;
+    border-radius: 10px;
+    align-content: center;
+    border-color: rgb(255, 255, 255, .3);
+    border-style: ridge;
+    border-width: 0.2px;
+    height: 40px;
+    width: 350px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 2fr 3fr 2fr;
+    padding: 10px 5px;
 }
