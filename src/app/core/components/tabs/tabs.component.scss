@@ -1,3 +1,5 @@
+@use "../../../../assets/styles/variables.scss";
+
 #container{
     display: flex;
     justify-content: space-around;
@@ -15,14 +17,21 @@
     }
     &:hover{
         stroke: 80px;
-        background-color: rgb(10, 100, 100);
+        background-color: variables.$color-acento-700;
         svg{
-            color: rgb(10, 100, 100);
+            color: variables.$color-acento-700;
             size: 40px;
         }
     }
 }
 
 .LinkIn{
-    background-color: rgb(10, 100, 100);
+    background-color: variables.$color-acento-700;
+}
+
+.icon{
+    font-size: 40px;
+    color: variables.$color-acento-600;
+    padding: 7px;
+    align-items: center;
 }

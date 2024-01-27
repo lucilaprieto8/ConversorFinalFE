@@ -8,8 +8,7 @@
             <label for="password" class="sr-only">contraseña</label>
             <input type="password" name="password" id="password" [(ngModel)]="loginData.Password" #password="ngModel" placeholder="Contraseña">
             <button type="submit" (click)="login()">Iniciar sesión</button>
-            <img class="circles" src="./../../../assets/img/icons/circles.svg" alt="circles"*ngIf="(waiting())">
-            <p *ngIf="(error())">Error al Iniciar Sesión</p>
+            <img class="spinner" src="./../../../assets/img/icons/spinner.svg" alt="cargando" *ngIf="waiting()">            <p *ngIf="(error())">Error al Iniciar Sesión</p>
         </form>
         <p>¿Todavía no tenés una cuenta?</p>
         <p> <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Registrate</a></p>
