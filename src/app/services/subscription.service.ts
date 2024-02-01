@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { subscription } from '../core/interfaces/subscription';
 import { API } from '../constants/api';
+import { EventService } from './event.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubscriptionService {
 
-  constructor(private service: ApiService) { }
+  constructor(private service: ApiService, private eventService : EventService) { }
 
   async getAllSubscriptions(): Promise<subscription[]>{
     const res = await this.service.getAuth('api/Subscription/AllSubs');
@@ -26,7 +27,10 @@ export class SubscriptionService {
         Authorization: 'Bearer ' + this.service.auth.token(),
         },
         body: JSON.stringify(id)
+
+        
       });
+      this.eventService.triggerConversionEvent();
     
   }
 }

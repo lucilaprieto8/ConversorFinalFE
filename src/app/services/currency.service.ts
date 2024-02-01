@@ -2,12 +2,15 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { API } from '../constants/api';
 import { currencyData, currencyToConvert } from '../core/interfaces/currency';
+import { EventService } from './event.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CurrencyService extends ApiService{
-
+  constructor(private eventService: EventService) {
+    super();
+  }
 
   async create(currency: currencyData): Promise<boolean> {
     if (currency.id) return false;
@@ -79,7 +82,10 @@ async getAttemps(): Promise<number>{
       body: JSON.stringify(currencyToConvert)   
     })
   const result = await res.json()
-  //console.log(parseInt(result))
+
+  this.eventService.triggerConversionEvent();
+
   return parseFloat(result)
+
   }
 }

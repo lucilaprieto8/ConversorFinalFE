@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from 'src/app/services/auth.service';
 import { CurrencyService } from 'src/app/services/currency.service';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-header',
@@ -11,18 +12,24 @@ import { CurrencyService } from 'src/app/services/currency.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
-  constructor(private service: AuthService, private currencyService:CurrencyService){}
+  constructor(private service: AuthService, private currencyService:CurrencyService, private eventService: EventService){}
+
+
+  attemps : number|undefined 
+  async ngOnInit(): Promise<void> {
+    this.updateAttempts();
+
+    // Suscribirse al evento de conversión
+    this.eventService.conversionOccurred$.subscribe(() => {
+      this.updateAttempts();
+    });
+  }
+
+  async updateAttempts() {
+    this.attemps = await this.currencyService.getAttemps();
+  }
 
   logout(){
     this.service.logout()
   }
-  attemps : number|undefined 
-  async ngOnInit(): Promise<void> {
-   let hola = await this.currencyService.getAttemps()
-   this.attemps = hola
-  }
-
- 
-
-
 }

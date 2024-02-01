@@ -22,8 +22,8 @@ export class ConversionComponent {
     })
   }
 
- resultadoConversion : number | undefined
- 
+  resultadoConversion : number | undefined
+  
   async convertsCurrency(){
     var currencyToConvertData : currencyToConvert = {
         amount: this.inputamount,
@@ -32,6 +32,6 @@ export class ConversionComponent {
       }
     this.resultadoConversion = await this.service.convertCurrency(currencyToConvertData)
 }
- 
+  
 
 }   
