@@ -1,41 +1,36 @@
-
-
-
 <div id="container">
     <div class="form-container">
-      <h1>Registro</h1>
+      <h1>REGISTER</h1>
       <form (ngSumbit)="register()">
-        <label for="user" class="sr-only">Nombre de usuario</label>
+        <label for="user" class="sr-only">Username</label>
         <input
           type="text"
           name="user"
           id="user"
-          placeholder="Usuario"
+          placeholder="User"
           autocomplete="username"
           minlength="4"
           required="true"
           [(ngModel)]="registerData.UserName"
           #username="ngModel"
         />
-        <label for="password" class="sr-only">Contraseña</label>
+        <label for="password" class="sr-only">Password</label>
         <input
           type="password"
           name="password"
           id="password"
-          placeholder="Contraseña"
+          placeholder="Password"
           autocomplete="current-password"
           minlength="8"
           [(ngModel)]="registerData.Password"
           #password="ngModel"
         />
+        <p> Do you already have an account? <a [routerLink]="['/login']" routerLinkActive="router-link-active" routerLinkActive="router-link-active" > Log In</a></p>
         <button type="submit" (click)="register()">
-          Registrarse
+          REGISTER
         </button>
-        <p *ngIf="errorRegister()" class="error">Error en el inicio de sesión</p>
+        <p *ngIf="errorRegister()" class="error">Failed to register</p>
       </form>
-      <p>¿Ya tenés una cuenta? </p>
-      <p>
-        <a [routerLink]="['/login']" routerLinkActive="router-link-active" routerLinkActive="router-link-active" > Iniciar Sesión</a></p>
     </div>
   </div>
   
