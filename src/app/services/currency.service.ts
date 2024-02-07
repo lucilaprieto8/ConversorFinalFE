@@ -86,6 +86,5 @@ async getAttemps(): Promise<number>{
   this.eventService.triggerConversionEvent();
 
   return parseFloat(result)
-
   }
 }

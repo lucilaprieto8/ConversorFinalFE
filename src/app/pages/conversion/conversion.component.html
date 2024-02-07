@@ -1,3 +1,4 @@
+<div>
 <input type="number" [(ngModel)]="inputamount">
     <select [(ngModel)]="idfrom" >
         <option class="option" *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
@@ -7,3 +8,4 @@
     </select>
     <button (click)="convertsCurrency()">convert</button>
     <p *ngIf="resultadoConversion !== undefined">Resultado: {{ resultadoConversion }}</p>
+</div>

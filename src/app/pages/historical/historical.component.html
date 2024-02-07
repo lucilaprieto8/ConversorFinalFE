@@ -1,6 +1,8 @@
-<h1>historical</h1>
-<div id="historical-component">
-    <app-tarjeta-historical
-        *ngFor="let historical of historicals.slice(-10).reverse()"
-        [historicalData]="historical">
-    </app-tarjeta-historical>
+<div class="container">
+    <h1>historical</h1>
+    <div id="historical-component">
+        <app-tarjeta-historical
+            *ngFor="let historical of historicals.slice(-10).reverse()"
+            [historicalData]="historical">
+        </app-tarjeta-historical>
+</div>

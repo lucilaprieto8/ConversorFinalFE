@@ -5,11 +5,10 @@
     height: 512px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: grey;
-    background-position: center;
-    background-size:cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("./../../../assets/img/background.png");
+    color: variables.$color-texto-wh;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 .formcito{
@@ -18,7 +17,7 @@
     box-shadow: 0px 0px 15px rgba(98, 98, 98, 0.5);
     background-color: rgb(202, 202, 202);
     color: variables.$color-acento-700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     font-size: large;
     font-weight: 600;
@@ -47,8 +46,9 @@
 .currenci h2{
     padding-bottom: 5px;
     text-align: center;
-    color: variables.$color-acento-700;
+    color: variables.$color-acento-600;
     font-weight: 600;
+    font-size: x-large;
 }
 
 #botones-container{
@@ -73,50 +73,7 @@ button{
     padding: 10px;
     border-radius: 8px;
     border:  variables.$color-acento-700;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    background-color: variables.$color-acento-700;
-    color: variables.$color-texto-wh;
-    justify-content: center;
-}
-.swal2-popup{
-    background-color: black;
-}
-.currenci{
-    margin-left: 15px;
-    padding: 15px;
-}
-
-.currenci h2{
-    padding-bottom: 5px;
-    text-align: center;
-    color: variables.$color-acento-700;
-    font-weight: 600;
-}
-
-#botones-container{
-    align-items: center!important;
-    justify-content: center!important;
-    display: flex;
-    flex-direction: column;
-}
-
-
-button{
-    margin-top: 10px;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    border-radius: 10px;
-    width: 80px;
-    display: flex;
-}
-
-button{
-    padding: 10px;
-    border-radius: 8px;
-    border:  variables.$color-acento-700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     background-color: variables.$color-acento-700;
     color: variables.$color-texto-wh;
