@@ -2,25 +2,29 @@
 
 
 .tarjeta-currency{
+
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
     cursor: pointer;
     color: white;
     font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     gap: 50px;
     padding: 10px 5px;
 }
 
 .container{
-    background-color: variables.$color-principal-900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
     border-radius: 10px;
     align-content: center;
-    border-color: rgb(255, 255, 255, .3);
-    border-style: ridge;
-    border-width: 0.2px;
     height: 40px;
-    width: 350px;
+   
     display: grid;
     gap: 40px;
     grid-template-columns: 2fr 3fr 2fr;
     padding: 10px 5px;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin:0px 20px ;
 }

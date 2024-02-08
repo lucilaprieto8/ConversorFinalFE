@@ -1,11 +1,14 @@
-<div>
-<input type="number" [(ngModel)]="inputamount">
-    <select [(ngModel)]="idfrom" >
+<div class="container">
+    <h1 *ngIf="viewErrorText()">{{errorText}}</h1>
+<input class="inp" type="number" [(ngModel)]="inputamount">
+    <select class="sele" [(ngModel)]="idfrom">
         <option class="option" *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
     </select>
-    <select [(ngModel)]="idto">
+    <select class="sele" [(ngModel)]="idto">
         <option class="option" *ngFor="let currency of currencyS" [ngValue]="currency.id">{{currency.leyend}}</option>
     </select>
-    <button (click)="convertsCurrency()">convert</button>
-    <p *ngIf="resultadoConversion !== undefined">Resultado: {{ resultadoConversion }}</p>
+    <button (click)="convertsCurrency()"><span class="material-symbols-outlined icon">
+        change_circle
+        </span>  </button>
+    <p *ngIf="resultadoConversion !== undefined">Resultado: {{ resultadoConversion | currency }}</p>
 </div>

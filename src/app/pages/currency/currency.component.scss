@@ -29,16 +29,28 @@
     font-size: 40px;
     color: variables.$color-acento-700;
 }
-
-ul {
+#currency-component{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
     background-color: rgba(0, 0, 0, 0.5);
-    list-style-type: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-style: ridge;
+    border-width: 1px;
+    // display: grid;
+    // grid-template-columns: 2fr 3fr 2fr;
+}
+ul {
+
     margin: 0;
     overflow: hidden;
     padding: 10px 15px;
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
-    color: variables.$color-acento-700;
+    color: variables.$color-acento-600;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: x-large;
     text-align: center;

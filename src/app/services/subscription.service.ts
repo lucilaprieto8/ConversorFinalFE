@@ -17,9 +17,7 @@ export class SubscriptionService {
     return resJson;
   }
 
-  async updateSubscription(id: number){
-    console.log(this.service.auth.token())
-  
+  async updateSubscription(id: number){  
       const res = await fetch(API + 'api/Subscription/' + id, {
         method: 'PUT',
         headers: {
@@ -32,5 +30,11 @@ export class SubscriptionService {
       });
       this.eventService.triggerConversionEvent();
     
+  }
+
+  async getMySubscription(): Promise<number>{
+    const res = await this.service.getAuth('api/Subscription/GetSub');
+    const resJson = await res.json();
+    return resJson;
   }
 }

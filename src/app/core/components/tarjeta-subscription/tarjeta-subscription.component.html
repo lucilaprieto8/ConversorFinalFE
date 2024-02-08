@@ -1,9 +1,10 @@
 <div class="form-container">
-    <div class="container">
+    <div [ngClass]="{'used': mySubscription == subscriptionData.id}" class="container">
         <div class="info">
             <h1>{{subscriptionData.name}}</h1>
             <p>Attemps: {{subscriptionData.maxAttemps}}</p>
             <p class="price">${{subscriptionData.price}}</p>
+            <p *ngIf="mySubscription == subscriptionData.id">Current subscription</p>
         </div>
     </div>
     </div>

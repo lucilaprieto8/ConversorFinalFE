@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { currencyData } from 'src/app/core/interfaces/currency';
 import { CurrencyService } from 'src/app/services/currency.service';
@@ -13,8 +13,16 @@ export class DetalleCurrencyComponent implements OnInit {
   currencyservice = inject(CurrencyService);
   activatedroute = inject(ActivatedRoute);
   router = inject(Router);
+  @ViewChild('modalEditar') modalEditar!: ElementRef;
 
   currency: currencyData={
+    id: 0,
+    leyend: "",
+    symbol: "",
+    ic: 0
+  }
+
+  currencyToEdit: currencyData = {
     id: 0,
     leyend: "",
     symbol: "",
@@ -24,11 +32,29 @@ export class DetalleCurrencyComponent implements OnInit {
   ngOnInit(): void {
     this.activatedroute.params.subscribe((params) => {
       this.currencyservice.getById(params['id']).then((res) => {
-        if (res) this.currency = res;
+        if (res) {
+          this.currency = res;
+          this.currencyToEdit = {
+            id: this.currency.id,
+            symbol: this.currency.symbol,
+            leyend: this.currency.leyend,
+            ic: this.currency.ic
+          };
+        } 
       });
     });
   }
 
+  closeModal() {
+    this.modalEditar.nativeElement.close();
+    this.currencyToEdit = {
+      id: this.currency.id,
+      symbol: this.currency.symbol,
+      leyend: this.currency.leyend,
+      ic: this.currency.ic
+    };
+  }
+  
   borrarCurrency(){
     Swal.fire({
       title:

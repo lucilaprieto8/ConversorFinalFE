@@ -11,4 +11,5 @@ import { subscription } from '../../interfaces/subscription';
 })
 export class TarjetaSubscriptionComponent {
     @Input() subscriptionData!: subscription
+    @Input() mySubscription!: number
 }

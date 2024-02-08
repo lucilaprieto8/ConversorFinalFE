@@ -72,19 +72,23 @@ async getAttemps(): Promise<number>{
 }
 
   async convertCurrency(currencyToConvert: currencyToConvert): Promise<number>{
-    console.log(currencyToConvert)
-    const res = await fetch(API + 'api/Currency/Convert', {
-      method: 'POST',
-      headers: {
-        'Content-type' : 'application/json',
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-      body: JSON.stringify(currencyToConvert)   
-    })
-  const result = await res.json()
-
-  this.eventService.triggerConversionEvent();
-
-  return parseFloat(result)
+    try {
+      const res = await fetch(API + 'api/Currency/Convert', {
+        method: 'POST',
+        headers: {
+          'Content-type' : 'application/json',
+          Authorization: 'Bearer ' + this.auth.token(),
+        },
+        body: JSON.stringify(currencyToConvert)   
+      })
+      const result = await res.json()
+      if(result.error) throw new Error(result.error)
+  
+      this.eventService.triggerConversionEvent();
+  
+      return parseFloat(result)
+    } catch (error) {
+      throw error;
+    }
   }
 }

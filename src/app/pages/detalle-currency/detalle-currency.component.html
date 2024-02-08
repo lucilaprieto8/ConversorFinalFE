@@ -22,8 +22,8 @@
         
       <dialog method="modal" #modalEditar class="formcito">
         <app-nueva-currency
-            (cerrar)="modalEditar.close()"
-            [currency]="currency">
+            (cerrar)="closeModal()"
+            [currency]="currencyToEdit">
         </app-nueva-currency>
       </dialog>
   </div>    

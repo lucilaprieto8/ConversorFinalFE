@@ -1,9 +1,9 @@
 <div class="form-container">
     <div class="container">
-            <p>Currency From: {{historicalData.currencyFrom}}</p>
-            <p>Currency To: {{historicalData.currencyTo}}</p>
-            <p>Amount Input: {{historicalData.amountInput}}</p>
-            <p>Amount Output: {{historicalData.amountOutput}}</p>
-            <p id="date"> Date: {{historicalData.conversionDate}}</p>
+            <p>Currency From: <span> {{historicalData.currencyFrom}} </span> </p>
+            <p>Currency To: <span> {{historicalData.currencyTo}}</span></p>
+            <p>Amount Input: <span>{{historicalData.amountInput}}</span></p>
+            <p>Amount Output:<span>{{historicalData.amountOutput}}</span></p>
+            <p id="date"> Date:<span> {{historicalData.conversionDate | date:'short'}}</span></p>
     </div>
 </div>

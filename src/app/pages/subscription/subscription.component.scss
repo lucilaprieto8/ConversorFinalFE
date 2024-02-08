@@ -1,6 +1,14 @@
 @use "./../../../assets/styles/variables.scss";
-div{
+.container{
     background-image: url("./../../../assets/img/background.png");
     color: variables.$color-texto-wh;
-    height: 90vh;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+
+}
+.tarjetas {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
 }

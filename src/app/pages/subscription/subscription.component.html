@@ -1,7 +1,10 @@
-<div>
+<div class="container">
+    <div class="tarjetas">
 <app-tarjeta-subscription
     *ngFor="let subscription of subscriptions" 
     [subscriptionData]="subscription"
-    (click)="updateSubscription(subscription.id)">
+    [mySubscription]="mySubscriptionId()"
+    (click)="updateSubscription(subscription.id)" >
 </app-tarjeta-subscription>
+</div>
 </div>
